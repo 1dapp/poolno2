@@ -174,7 +174,7 @@ function loaddata(poolno) {
             $.each(log, function (key, value) {
                 if (value.returnValues._level == poolno) {
                     $('.pooldetailspagetable tbody').append('<tr class="' + value.returnValues._user + '"><td>' + poolno + '</td><td>' + value.returnValues._user + '</td><td></td><td></td><td></td></tr>');
-                    if (poolno == 1) {
+                    if (poolno == 2) {
                         myContractInstance.methods.pool1users(value.returnValues._user).call().then(function (result1) {
                           
                                 $('.' + value.returnValues._user + ' td:nth-child(3)').html(result1.id);
